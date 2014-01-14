@@ -1,0 +1,175 @@
+describe 'Service: CArray', () ->
+
+  # load the service's module
+  beforeEach module 'exhibiaApp'
+
+  # instantiate service
+  a = null
+  describe 'Constructor with single-element arugment', ->
+    beforeEach inject (carray) ->
+      a = new carray 4
+    it 'should be instance of Array', ->
+      expect(a instanceof Array).toBeTruthy()
+    it 'should return correct size', ->
+      expect(a.size).toBe 4
+    it 'should return correct length', ->
+      expect(a.length).toBe 0
+    describe 'Array-like behavior', ->
+      beforeEach ->
+        a.push 0
+        a.push 2
+        a.push 4
+        a.push 6
+
+      it 'should have Array-like iterator', ->
+        i = 0
+        for v in a
+          expect(v).toBe i
+          i += 2
+      it 'should be [object Array] when convert to string', ->
+        expect(Object.prototype.toString.apply a).toBe '[object Array]'
+      it 'should have Array-like forEach', ->
+        i = 0
+        a.forEach (v)->
+          expect(v).toBe i
+          i += 2
+    it 'should have capped size', ->
+      expect(a.length).toBe 0
+      a.push 0
+      expect(a.length).toBe 1
+      a.push 2
+      expect(a.length).toBe 2
+      a.push 4
+      expect(a.length).toBe 3
+      a.push 6
+      expect(a.length).toBe 4
+      a.push 8
+      expect(a.length).toBe 4
+      a.push 10
+      expect(a.length).toBe 4
+    it 'should have correct order', ->
+      a.push 0
+      a.push 2
+      a.push 4
+      a.push 6
+      i = 0
+      for v in a
+        expect(v).toBe i
+        i += 2
+
+      a.push 8
+      a.push 10
+      i = 4
+      for v in a
+        expect(v).toBe i
+        i += 2
+
+      a.push 12
+      a.push 14
+      i = 8
+      for v in a
+        expect(v).toBe i
+        i += 2
+
+    it 'should parse an array', ->
+      a.parse [100,200,300,400,500]
+      i = 200
+      for v in a
+        expect(v).toBe i
+        i += 100
+
+    it 'should not have pop()', ->
+      expect(a.pop).toBeUndefined()
+    it 'should not have shift()', ->
+      expect(a.shift).toBeUndefined()
+    it 'should not have unshift()', ->
+      expect(a.unshift).toBeUndefined()
+
+  describe 'Constructor with multi-element arugment', ->
+    beforeEach inject (carray) ->
+      a = new carray 4
+  describe 'Constructor with single-element array', ->
+    beforeEach inject (carray) ->
+      a = new carray [0]
+    it 'should be instance of Array', ->
+      expect(a instanceof Array).toBeTruthy()
+    it 'should return correct size', ->
+      expect(a.size).toBe 1
+    it 'should return correct length', ->
+      expect(a.length).toBe 1
+    describe 'Array-like behavior', ->
+      it 'should have Array-like iterator', ->
+        i = 0
+        for v in a
+          expect(v).toBe i
+          i += 2
+      it 'should have Array-like forEach', ->
+        i = 0
+        a.forEach (v)->
+          expect(v).toBe i
+          i += 2
+    it 'should have capped size', ->
+      expect(a.length).toBe 1
+      a.push 8
+      expect(a.length).toBe 1
+      a.push 10
+      expect(a.length).toBe 1
+
+    it 'should not have pop()', ->
+      expect(a.pop).toBeUndefined()
+    it 'should not have shift()', ->
+      expect(a.shift).toBeUndefined()
+    it 'should not have unshift()', ->
+      expect(a.unshift).toBeUndefined()
+  describe 'Constructor with multi-element array ', ->
+    beforeEach inject (carray) ->
+      a = new carray [0,2,4,6]
+    it 'should be instance of Array', ->
+      expect(a instanceof Array).toBeTruthy()
+    it 'should return correct size', ->
+      expect(a.size).toBe 4
+    it 'should return correct length', ->
+      expect(a.length).toBe 4
+    describe 'Array-like behavior', ->
+      it 'should have Array-like iterator', ->
+        i = 0
+        for v in a
+          expect(v).toBe i
+          i += 2
+      it 'should have Array-like forEach', ->
+        i = 0
+        a.forEach (v)->
+          expect(v).toBe i
+          i += 2
+    it 'should have capped size', ->
+      expect(a.length).toBe 4
+      a.push 8
+      expect(a.length).toBe 4
+      a.push 10
+      expect(a.length).toBe 4
+    it 'should have correct order', ->
+      i = 0
+      for v in a
+        expect(v).toBe i
+        i += 2
+
+      a.push 8
+      a.push 10
+      i = 4
+      for v in a
+        expect(v).toBe i
+        i += 2
+
+      a.push 12
+      a.push 14
+      i = 8
+      for v in a
+        expect(v).toBe i
+        i += 2
+
+    it 'should not have pop()', ->
+      expect(a.pop).toBeUndefined()
+    it 'should not have shift()', ->
+      expect(a.shift).toBeUndefined()
+    it 'should not have unshift()', ->
+      expect(a.unshift).toBeUndefined()

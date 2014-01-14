@@ -1,0 +1,27 @@
+# npm dependency
+node_modules
+dist
+.tmp
+.sass-cache
+# bower dependency
+app/components
+src/
+*.log
+app/upload/
+var
+
+# generated sprite
+app/image/emo-*.png
+
+*.pyc
+*.idea
+site_media/
+.project
+.pydevproject
+*.db
+exhibia/cache
+exhibia/settings/local_settings.py
+src/
+
+# coverage
+exhibia/.coverage

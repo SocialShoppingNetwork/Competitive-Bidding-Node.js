@@ -1,0 +1,30 @@
+<div class="modal-header">
+  <h1>Add Credit Card</h1>
+</div>
+<div class="modal-body">
+  <div>
+    Please add at least 1 valid credit card to be able to sponsor.
+  </div>
+  <ul>
+    <li>
+      <label>Number</label>
+      <input ng-model='card.number' placeholder='Number'>
+    </li>
+    <li>
+      <label>Expiration</label>
+      <input ng-model='card.expirationDate' placeholder="E.g: 11/2015"/>
+    </li>
+    <li>
+      <label>Holder's name</label>
+      <input ng-model='card.cardholderName' placeholder="Holder's name" />
+    </li>
+    <li>
+      <label>CVV</label>
+      <input ng-model='card.cvv' placeholder="E.g: 257" />
+    </li>
+  </ul>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-click="add(card)" ng-disabled="submitDisabled">Add!</button>
+  <button ng-click="close()" class="btn btn-warning">Close</button>
+</div>

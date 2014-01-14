@@ -1,0 +1,60 @@
+<div ng-controller='AdminProductCtrl'>
+  <form name="product">
+    <label>
+      <span>Language</span>
+      <select
+        ng-model='language'
+        ng-options='code as name for (code,name) in languageMap'
+        >
+      </select>
+    </label>
+    <label>
+      <span>Product code</span>
+      <input ng-model='code' placeholder='Product code' required>
+    </label>
+
+    <label>
+      <span>Product name</span>
+      <input
+        maxlength='30'
+        ng-repeat='(c, l) in languageMap'
+        ng-model='name[c]'
+        ng-show='c == language'
+        placeholder='Product name in {{l}}'
+        >
+    </label>
+    <label>Product category</label>
+    <select ng-model='category' ng-options='category._id as category.name for category in categoryList'></select>
+    <label>
+      <span>Description</span>
+      <textarea
+        ng-repeat='(c, l) in languageMap'
+        ng-model='description[c]'
+        ng-show='c == language'
+        placeholder='Product description in {{l}}'
+        >
+      </textarea>
+    </label>
+    <label>Image</label>
+    <div upload ng-model='imageUrl' class='upload'></div>
+    <br>
+    <button ng-click='create()' ng-hide='enableEdit'>Create!</button>
+    <button ng-click='edit()' ng-show='enableEdit'>Edit!</button>
+  </form>
+  <h2>Product list</h2>
+  <ul>
+    <li ng-repeat='product in productList'>
+      <span
+        ng-repeat='(c, l) in languageMap'
+        ng-show='c == language'
+        >
+        {{product.name[c]}}
+      </span>
+      &nbsp;-&nbsp;
+      <span>
+        {{product.code}}
+      </span>
+      <img ng-src="{{product.imageUrl}}"><button ng-click='delete()'>x</button><button ng-click="editProductLocation()">edit</button>
+    </li>
+  </ul>
+</div>

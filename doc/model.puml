@@ -1,0 +1,112 @@
+@startuml
+
+!define app(x) package x << (T,#FF00AA) >>
+!define table(x) package x << (T,#FFAAAA) >>
+' Primary key
+!define p(x) class x << P, #FF0000 >>
+' Foreign key
+!define f(x) class x << F, #FF00FF >>
+' Unique
+!define u(x) class x << U, #00FF00 >>
+' Index
+!define i(x) class x << I, #0000FF >>
+' Attribute
+!define a(x) class x << A, #00FFFF >>
+
+table(category) {
+  p(category.id)
+  u(code)
+  u(name)
+}
+
+table(item) {
+  p(item.id)
+  u(code){
+    validator =[RegexValidator('^[a-zA-Z0-9-]+$')]
+  }
+  f(categoryId) - category.id
+  u(name)
+  a(price)
+  a(fund)
+  a(description)
+  a(updated){
+    time
+  }
+  a(images){
+  }
+  a(shippingFee)
+  a(transitionTime){
+    integer: seconds
+  }
+  a(biddingTime){
+    integer: seconds
+  }
+}
+
+table(auction){
+  p(auction.id)
+  f(itemId) - item.id
+  i(status){
+    0: created
+    1: funding
+    2: transition
+    3: bidding
+    4: checkout
+    5: shipping
+    6: feedback
+    7: closed
+  }
+  a(funded)
+  table(bidList){
+    f(bidder) "n" - user.id
+    a(bidList.price)
+  }
+  bidList o- user
+  table(backerList){
+    f(baker)
+    a(backerList.fund)
+  }
+  backerList o- user
+  a(winner) - user.id
+}
+
+table(user){
+  p(id)
+  u(username)
+  a(password)
+  a(firstName)
+  a(lastName)
+  u(email)
+  a(phoneNumber)
+  a(facebook)
+  a(twitter)
+  a(google)
+  a(bidCount)
+  a(pointCount)
+  a(badgeSet)
+  table(address){
+    a(street)
+    a(code)
+    a(city)
+    a(postcode)
+    a(country)
+    a(phoneNumber)
+  }
+  table(creditCard){
+    u(cardNumber)
+    a(securityNumber)
+  }
+}
+/'''
+table(order){
+  f(auction) - auction.id
+  a(shippingFirstName)
+  a(shippingLastName)
+  a(shippingAddress){
+  }
+  BillingFirstName
+  BillingLastName
+  BillingAddress: FK (address)
+  Card: FK (card)
+'''/
+@enduml

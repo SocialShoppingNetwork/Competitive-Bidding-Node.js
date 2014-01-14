@@ -1,0 +1,22 @@
+<div class="ng-cloak" ng-controller="LoginCtrl">
+    <div ng-hide='session.user'>
+      <form class="form-inline" ng-submit="login()" style="text-align: center">
+        <div>
+        <input class="input-small" l10n-placeholder="Username" ng-model="username">
+        <input class="input-small" l10n-placeholder="Password" ng-model="password" type="password">
+        </div>
+        <div>
+        <button l10n type='submit' ng-disabled="loginDisabled">Login</button>
+        &nbsp;<span l10n>or</span>&nbsp;
+        <button l10n type='button' ng-click='fbLogin()' ng-disabled="loginDisabled">Login with Facebook</button>
+        </div>
+      </form>
+    </div>
+    <div ng-show='session.user'>
+        <span
+          l10n
+          l10n-params='{{session.user.name}}'
+          style="font-size: 15px;position: relative;top: 0.3em;">Hello {0}</span>
+        <button l10n ng-click="logout()" type="button">Logout</button>
+    </div>
+</div>

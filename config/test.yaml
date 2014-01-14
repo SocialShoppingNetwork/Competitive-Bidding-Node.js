@@ -1,0 +1,7 @@
+$socket: http://ec2-54-228-217-67.eu-west-1.compute.amazonaws.com:8001
+socketPort: 8001
+_redis:
+  host: redis://redistogo:e2bb2371827c306ed355f2080e8d2ada@jack.redistogo.com
+  port: 9227
+_mongoUrl: mongodb://exhibia-test:12345e@ds033818.mongolab.com:33818/exhibia-test
+#_log: file

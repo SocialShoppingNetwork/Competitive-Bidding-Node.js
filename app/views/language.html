@@ -1,0 +1,4 @@
+<div ng-controller='LanguageCtrl'>
+  <select ng-model='language' ng-options='code as name for (code,name) in languageMap' ng-change='setLanguage()' style='width:105%'>
+  </select>
+</div>

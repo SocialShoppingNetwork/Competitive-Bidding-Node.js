@@ -1,0 +1,14 @@
+<div ng-controller='AdminCategoryCtrl'>
+  <form ng-submit='submit()'>
+    <input ng-model='code' placeholder="Product code"/>
+    <input ng-model='name' placeholder="Product name"/>
+    <button type='submit'>Create!</button>
+  </form>
+
+  <h2>Category list</h2>
+  <ul>
+    <li ng-repeat='category in categoryList'>
+      {{category.name}} - {{category.code}} <button ng-click='delete()'>x</button>
+    </li>
+  </ul>
+</div>

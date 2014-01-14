@@ -1,0 +1,345 @@
+[
+  {
+    "__v": 3,
+    "_id": {
+      "$oid": "512c97824bc4d94c5c000003"
+    },
+    "email": "",
+    "firstName": "Lauri",
+    "lastName": "Truongsg",
+    "password": "$2a$10$S5SYE2ElKSlBjL5RDPAIvODPHGWAiD.XerCiljv1xP871vZskNlf.",
+    "username": "lauri",
+    "v": 0
+  },
+  {
+    "__v": 0,
+    "_id": {
+      "$oid": "512c97acb64a164e5c000003"
+    },
+    "bidCount": 205,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "salsa",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895d9"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 1,
+    "username": "linda",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895da"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 1,
+    "username": "henri",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895db"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "aku",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895dc"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "kari",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895dd"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "into",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895de"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "esa",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895df"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "rita",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895e0"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "heta",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895e1"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "meri",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895e2"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "alpha",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895e3"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "beta",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895e4"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "gamma",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895e5"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "delta",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895e6"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "epsilon",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895e7"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "zeta",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895e8"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "theta",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895e9"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "iota",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895ea"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "kappa",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895eb"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "lambda",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895ec"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "mu",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895ed"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "nu",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895ee"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "xi",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895ef"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "omicron",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895f0"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "pi",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895f1"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "rho",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895f2"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "sigma",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895f3"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "tau",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895f4"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "upsilon",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895f5"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "phi",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895f6"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "chi",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895f7"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "psi",
+    "v": 0
+  },
+  {
+    "_id": {
+      "$oid": "513cee8d2e037385464895f8"
+    },
+    "__v": 0,
+    "password": "$2a$10$8NxOfjUAHtrLvnGbweKyEOPXuK.Y6vw35UP/nL3pa9aLeehHpQD2O",
+    "permissionMask": 0,
+    "username": "omega",
+    "v": 0
+  }
+]

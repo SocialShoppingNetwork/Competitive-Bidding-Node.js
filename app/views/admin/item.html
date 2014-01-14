@@ -1,0 +1,52 @@
+<div ng-controller='AdminItemCtrl'>
+  <form name='item' ng-submit='create()'>
+    <label>
+      <span>For product</span>
+      <select ng-model='product'>
+        <option ng-repeat='(id, product) in productMap' value='{{id}}'>
+          {{product.name[$locale.id]}} - {{product.code}}
+        </option>
+      </select>
+    </label>
+    <label>
+      <span>Pledged Fund</span>
+      <input type='number' ng-model='newItem.fundSizeRequired'>
+    </label>
+    <label>
+      <span>Pledged Sponsor</span>
+      <input type='number' ng-model='newItem.sponsorCountRequired'>
+    </label>
+    <label>
+      <span>Transition Time (seconds)</span>
+      <input type='number' ng-model='newItem.transitionTimeS'>
+    </label>
+    <label>
+      <span>Bidding Time (seconds)</span>
+      <input type='number' ng-model='newItem.competitionTimeS'>
+    </label>
+    <button type='submit'>Create!</button>
+  </form>
+  <h2>Item List</h2>
+
+  <ul>
+    <li ng-repeat='item in itemList'>
+
+      <h3
+        ng-repeat='(l, n) in languageMap'
+        ng-show='l == $locale.id'
+        >
+        {{item.product.name[l]}}
+      </h3>
+      <p>Code: {{item.product.code}}</p>
+      <p>State: {{item.state}}</p>
+      <img ng-src='{{item.product.imageUrl}}'>
+      <p>Fund: {{item.fundSize}} / {{item.fundSizeRequired}}</p>
+      <p>Sponsor: {{item.sponsorCount}} / {{item.sponsorCountRequired}}</p>
+      <p>State: {{item.state}} - {{item.stateMess}}</p>
+      <p>Transition Time: {{item.transitionTimeout/1000}} seconds</p>
+      <p>Competition Time: {{item.competitionTimeout/1000}} seconds</p>
+      <button ng-click='delete()' ng-hide='item.state'>x</button>
+      <button ng-click='enableItem()' ng-hide='item.state'>Enable Funding</button>
+    </li>
+  </ul>
+</div>

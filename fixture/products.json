@@ -1,0 +1,22 @@
+[
+  {
+    "__v": 0,
+    "_id": {
+      "$oid": "513c495574856c18c7000003"
+    },
+    "category": {
+      "$oid": "51374380ab367f45cc000005"
+    },
+    "code": "iphone4sb64i",
+    "competitionTimeout": 120000,
+    "description": "myDescdsf",
+    "fundSizeRequired": 4000,
+    "image": "placeholdesssr.png",
+    "name": "iPhone 4S Black 64GB International",
+    "sponsorCountRequired": 2,
+    "transitionTimeout": 553000,
+    "updated": {
+      "$date": 1362905939861
+    }
+  }
+]

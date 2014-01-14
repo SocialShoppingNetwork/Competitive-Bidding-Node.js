@@ -1,0 +1,20 @@
+<div ng-controller="ChatCtrl">
+	<div ng-include src="'views/notification.html'"></div>
+	<div class="col">
+		<div class="overflowable" overflowable>
+			<div ng-repeat="mess in messageList | limitTo: -20">
+				<a href="/#/user/profile/{{mess.userId}}">
+					<img class='chatAvatar' ng-src="{{mess.avatarUrl}}">
+					<span class='sender'>{{mess.name}}</span>
+				</a>
+				<div ng-repeat="text in mess.message" ng-bind-html-unsafe='text | emo'></div>
+			</div>
+		</div>
+	</div>
+	<div class="clr">
+		<form ng-submit="sendMessage()">
+			<input size="60" ng-model="message">
+			<button l10n type='submit' ng-disabled='!session.user'>Send</button>
+		</form>
+	</div>
+</div>

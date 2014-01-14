@@ -1,0 +1,27 @@
+<div ng-controller='UserCardCtrl'>
+  <form ng-submit='create()'>
+    <ul>
+      <li>
+        <label>Number</label>
+        <input ng-model='card.number' placeholder='Number'>
+      </li>
+      <li>
+        <label>Expiration</label>
+        <input ng-model='card.expirationDate' placeholder="E.g: 11/2015"/>
+      </li>
+      <li>
+        <label>Holder's name</label>
+        <input ng-model='card.cardholderName' placeholder="Holder's name" />
+      </li>
+      <li>
+        <label>CVV</label>
+        <input ng-model='card.cvv' placeholder="E.g: 257" />
+      </li>
+      <li>
+        <label>Make default</label>
+        <input type='checkbox' ng-model="card.options.makeDefault"/>
+      </li>
+    </ul>
+    <button type='submit' ng-disabled="submitDisabled">Add!</button>
+  </form>
+</div>

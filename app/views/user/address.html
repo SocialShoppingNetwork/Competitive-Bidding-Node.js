@@ -1,0 +1,47 @@
+<div ng-controller='UserAddressCtrl'>
+  <form ng-submit='add()'>
+    <ul>
+      <li>
+        <label>First name</label>
+        <input ng-model='address.firstName' placeholder='First name'>
+      </li>
+      <li>
+        <label>Last name</label>
+        <input ng-model='address.lastName' placeholder='Last name'>
+      </li>
+      <li>
+        <label>Company</label>
+        <input ng-model='address.company' placeholder='Company'>
+      </li>
+      <li>
+        <label>Street address</label>
+        <input ng-model='address.streetAddress' placeholder='Street address'>
+      </li>
+      <li>
+        <label>Extended Address</label>
+        <input ng-model='address.extendedAddress' placeholder='Extended Address'>
+      </li>
+      <li>
+        <label>City/Locality</label>
+        <input ng-model='address.locality' placeholder='City/Locality'>
+      </li>
+      <li>
+        <label>State/Province/Region</label>
+        <input ng-model='address.region' placeholder='State/Province/Region'>
+      </li>
+      <li>
+        <label>Postal Code</label>
+        <input ng-model='address.postalCode' placeholder='Postal code'>
+      </li>
+      <li>
+        <label>Country</label>
+        <select ng-model='address.countryCodeAlpha2'>
+          <option ng-repeat="country in countryList" value="{{country.0}}">
+            {{country.1}}
+          </option>
+        </select>
+      </li>
+    </ul>
+    <button type='submit'>Add!</button>
+  </form>
+</div>

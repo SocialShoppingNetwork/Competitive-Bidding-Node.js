@@ -1,0 +1,8 @@
+$socket: http://localhost:5000
+_cpu: 2
+_mongoUrl: mongodb://localhost/exhibia
+_redis:
+  host: localhost
+socialNetwork:
+  facebook:
+    _secret: myOthers3cret

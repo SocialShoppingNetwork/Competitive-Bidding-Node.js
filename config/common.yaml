@@ -1,0 +1,38 @@
+$socket: http://localhost:5000
+_socketPort: 5000
+_cpu: 4
+_redis:
+  port: 6379
+  host:
+_mongoUrl:
+$languageSet:
+  - en
+  - es
+  - fi
+  - vi
+_paymentGateway:
+  braintree:
+    environment: Sandbox
+    merchantId: gfhbyyfp757h9sxt
+    publicKey: 95w57c6gc4jhhd98
+    privateKey: 45dd2d8d2fee576de003c74a571eacfb
+socialNetwork:
+  facebook:
+    _secret: s3cret
+    $myKey: myKey
+_s3:
+  key: AKIAJCAXW2LKY2RXOFAA
+  secret: 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
+  bucket: exhibia-test-upload
+  url: //exhibia-test-upload.s3-website-us-east-1.amazonaws.com
+_log: console
+# E.g:
+# 100: 100 cents = 1 bid
+# 60: 60 cents = 1 bid
+_bidDivisor: 100
+# currency saved in cent as basic unit, human unit is dollar, which is 100 cents
+# example:
+# USD: 100
+# Rub: 1
+# VND: 0.001
+_currencyMultiplier: 100

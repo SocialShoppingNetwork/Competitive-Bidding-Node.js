@@ -1,0 +1,334 @@
+@import "compass_twitter_bootstrap";
+@import "emo/*.png";
+button {
+  @extend .btn;
+  &.warning {
+    @extend .btn-warning;
+  }
+}
+
+// to set up vertical line from top to bottom
+body, html {
+  height: 90%;
+}
+
+html.dragover {
+  .upload {
+    background-color: #f00;
+  }
+}
+textarea {
+  display: block;
+}
+.upload {
+  border: 5px dashed #ccc;
+  width: 150px;
+  height: 150px;
+  span {
+    margin: 20px auto;
+  }
+  &.dragover {
+    border-color: #333;
+  }
+}
+
+.emo-sprite {
+  vertical-align: middle;
+  // all emo have same dimension, get one and set all
+  height: emo-sprite-height(Heart);
+  width: emo-sprite-width(Heart);
+  // try to hide the text
+  color: transparent;
+  font-size: 0;
+  text-indent: 9999em;
+}
+
+@include all-emo-sprites;
+/* Will be compiled down to a single stylesheet with your sass files */
+
+a:hover {
+  // for link to user profile in chatbox
+  text-decoration: none;
+  // set exclusively for Angular dropdown list
+  cursor: pointer;
+}
+
+// for chatbox
+.overflowable {
+  height: 240px;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+.sender {
+  position: relative;
+  top: 10px;
+}
+.col {
+  float: left;
+  width: 280px;
+}
+.clr {
+  clear: both;
+}
+.clr button {
+  padding: 0.7% 4.4%;
+}
+.chatAvatar {
+  width: 10%;
+}
+
+.notification {
+  height:100px;
+  border-bottom: 1px solid #ccc;
+}
+
+// for Item Boxes
+.itemBox {
+  margin: 10px 15px 5px 0px;
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  background-color: white;
+}
+.itemBox div:first-child {
+  position:relative;
+}
+.itemName {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  height: 38px;
+}
+.sponsorProgress {
+  width: 80%;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.timer {
+  line-height: 50px;
+  text-align: center;
+  font-size: 15px;
+}
+.timerSec {
+  font-size:17px;
+}
+.itemMessage {
+  text-align: center;
+  margin-left: 47px !important;
+  height: 36px;
+  over-flow: hidden !important;
+}
+.itemBoxFooter {
+  position: relative;
+  background-color: #EEEEEE;
+}
+.sponsorAmount {
+  width: 40%;
+  margin-left: 5%;
+  margin-top:5%;
+}
+.sponsorBtn {
+  margin: 5%;
+  padding: 2% 4%;
+}
+.competeBtn {
+  margin-left: 9%;
+  padding: 2% 4%;
+}
+
+// for Item Modal
+.itemModalImgPanel {
+  float: left;
+}
+.itemModalSponsorProgress {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+.itemModalTimer {
+  text-align: center;
+  margin-top: 5%;
+}
+.itemModalInfoPanel {
+  float: right;
+  width: 70%;
+}
+.itemModalSendMess {
+  padding: 0.7% 4.4%;
+}
+.itemModalFooterLeft {
+  float: left;
+}
+
+.loginBar {
+  position: relative;
+  top: 1em;
+}
+
+.languageBar {
+  position: relative;
+  top: 21px;
+  left: 40%;
+  float: right;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #333333;
+  background-color: #ffffff;
+  padding-top: 70px;
+  background-image: url("/image/dot-background-2.jpg");
+}
+
+.ng-cloak {
+  // this will change to block when scope and angular is ready
+  display: none !important;
+}
+
+// For Twitter Bootstrap Affix panel on the right
+.affix {
+  top: 62px;
+}
+
+​
+
+// For navigation bar on the top
+.nav {
+  margin-bottom: 18px;
+  margin-left: 0;
+  list-style: none;
+}
+
+.nav > li > a {
+  display: block;
+}
+
+.nav > li > a:hover {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+
+.nav > .pull-right {
+  float: right;
+}
+
+.nav .nav-header {
+  display: block;
+  padding: 3px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #999999;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.navbar .nav > li > a {
+  float: none;
+  padding: 26px 10px 24px;
+  line-height: 19px;
+  color: #999999;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+// Exhibia banner
+.navbar .brand {
+  display: block;
+  float: left;
+  padding: 1px 20px 24px;
+  margin-left: -20px;
+  font-size: 19px;
+  font-weight: 200;
+  line-height: 1;
+  color: #999;
+  background: url('/image/exhibia_logo.png') no-repeat center;
+  width: 207px;
+  height: 38px;
+  text-indent: -5000px;
+  margin-right: 20px;
+}
+
+// The little arrow of dropdown list
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: "";
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.dropdown:hover .caret {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+// for search box
+.navbar-search {
+  position: relative;
+  float: left;
+  margin-top: 21px;
+  margin-bottom: 0;
+}
+
+.navbar-search .search-query {
+  padding: 4px 9px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1;
+  color: white;
+  background-color: #FCFCFC;
+  border: 1px solid whiteSmoke;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.15);
+     -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.15);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.15);
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+.navbar-search .search-query:-moz-placeholder {
+  color: #cccccc;
+}
+
+.navbar-search .search-query:-ms-input-placeholder {
+  color: #cccccc;
+}
+
+.navbar-search .search-query::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+.navbar-search .search-query:focus,
+.navbar-search .search-query.focused {
+  padding: 5px 10px;
+  color: #333333;
+  text-shadow: 0 1px 0 #ffffff;
+  background-color: #ffffff;
+  border: 0;
+  outline: 0;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+}
+// vertical between Sign-in button and Search box
+.navbar .divider-vertical {
+  width: 1px;
+  height: 69px;
+  margin: 0 9px;
+  overflow: hidden;
+  background-color: #F4F4F4;
+  border-right: 1px solid white;
+}

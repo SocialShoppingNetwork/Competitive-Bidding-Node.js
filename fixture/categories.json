@@ -1,0 +1,24 @@
+[
+  {
+    "updated": {
+      "$date": 1361992486678
+    },
+    "code": "",
+    "name": "Cosmetic",
+    "_id": {
+      "$oid": "512e5b264d407e2fee00000a"
+    },
+    "__v": 0
+  },
+  {
+    "updated": {
+      "$date": 1362576256288
+    },
+    "code": "HH",
+    "name": "Handheld",
+    "_id": {
+      "$oid": "51374380ab367f45cc000005"
+    },
+    "__v": 0
+  }
+]

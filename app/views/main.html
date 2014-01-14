@@ -1,0 +1,92 @@
+<div>
+  <div class='itemBox' ng-repeat='item in itemList' class='auctionItem'>
+    <div>
+      <div class='itemName'><a href='#/item/{{item.id}}' style='color:black'>{{item.product.name}}</a></div>
+      <div align='center'><a href='#/item/{{item.id}}'><img ng-src="{{item.product.imageUrl}}" style='width:150px'></a></div>
+      <div class="progress sponsorProgress" ng-show='item.sponsoring'>
+        <div class="bar" style="width: {{item.progress}}%;">{{item.progress}}%</div>
+      </div>
+      <div class='timer' ng-show='item.transitioning'>
+        <strong class='timerSec'>{{item.transitionTime}}</strong> Seconds
+      </div>
+      <div class='timer' ng-show='item.competing'>
+        <strong class='timerSec'>{{item.competitionTime}}</strong> Seconds
+      </div>
+      <div class='row' ng-show='item.sponsoring'>
+        <div class='span4 itemMessage'>{{item.timeSince}}</div>
+        <div class='span4' style='text-align:right'><strong>{{item.sponsorCount}}</strong>&nbsp;Sponsor</div>
+      </div>
+      <div class='row' ng-show='item.transitioning'>
+        <div class='span8 itemMessage'>{{item.transitionMessage}}</div>
+      </div>
+      <div class='row' ng-show='item.competing'>
+        <div class='span8 itemMessage' ng-show='item.competingMessage'>Winning: <a href="/#/user/profile/{{item.currentWinner}}">{{item.currentWinner}}</a> at: {{item.price | currency: "€"}}</div>
+        <div class='span8 itemMessage' ng-hide='item.competingMessage'>Be the Winner..</div>
+      </div>
+    </div>
+    <div class='itemBoxFooter'>
+      <input
+        ng-model='amount'
+        ng-disabled="item.sponsorDisabled || !session.user" ng-show='item.sponsoring'
+        type='number'
+        l10n-placeholder='Default: {0}'
+        l10n-placeholder-params='10'
+        class='sponsorAmount'
+        />
+      <button
+        ng-click='sponsor()'
+        ng-disabled="item.sponsorDisabled || !session.user"
+        class='sponsorBtn'
+        >
+        Sponsor
+      </button>
+      <button
+        ng-click='compete()'
+        ng-disabled='item.competeDisabled || !session.user' ng-show='item.competing'
+        class='CompeteBtn'
+        >
+        Compete
+      </button>
+    </div>
+  </div>
+  <div modal="itemModal" close="modalClose()" options="descOpts">
+    <div class="modal-header">
+      <h1>{{itemDetail.product.name}}</h1>
+    </div>
+    <div class="modal-body">
+      <div class='itemModalImgPanel'>
+        <img ng-src="{{itemDetail.product.imageUrl}}">
+        <div style='text-align:center;' ng-show='itemDetail.sponsoring'>
+          <div class="progress itemModalSponsorProgress" ng-show='itemDetail.sponsoring'>
+            <div class="bar" style="width: {{itemDetail.progress}}%;">{{itemDetail.progress}}%</div>
+          </div>
+        </div>
+        <div class='itemModalTimer' ng-show='itemDetail.transitioning'>
+          <strong class='timerSec'>{{itemDetail.transitionTime}}</strong> Seconds
+          <div>Preparing item...</div>
+        </div>
+        <div class='itemModalTimer' ng-show='itemDetail.competing'>
+          <strong class='timerSec'>{{itemDetail.competitionTime}}</strong> Seconds
+          <div ng-show='itemDetail.competingMessage'>Winning: {{itemDetail.currentWinner}}</div>
+          <div ng-show='itemDetail.competingMessage'>At: {{itemDetail.price | currency: "€"}}</div>
+          <div ng-hide='itemDetail.competingMessage'>Be the Winner..</div>
+        </div>
+      </div>
+      <accordion class='itemModalInfoPanel' close-others="true">
+        <accordion-group heading="Item Description" is-open='true'>
+          {{itemDetail.product.description}}
+        </accordion-group>
+        <accordion-group heading="Latest competitors" open>
+          <ul>
+            <li ng-repeat='competitor in itemDetail.competitorList'>{{competitor.username}}</li>
+          </ul>
+        </accordion-group>
+      </accordion>
+    </div>
+    <div class="modal-footer">
+      <button ng-click='compete()' class='itemModalFooterLeft' ng-disabled='itemDetail.competeDisabled || !session.user'>Compete</button>
+      <button ng-click='sponsor()' class='itemModalFooterLeft' ng-disabled="itemDetail.sponsorDisabled || !session.user">Sponsor</button>
+      <button ng-click="modalClose()" class="warning">Close</button>
+    </div>
+  </div>
+</div>

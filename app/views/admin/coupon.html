@@ -1,0 +1,14 @@
+<div ng-controller='AdminCouponCtrl'>
+  <form ng-submit='submit()'>
+    <input ng-model='couponValue' placeholder="Coupon Value"/>
+    <button type='submit'>Create!</button>
+  </form>
+
+  <h2>Coupon list</h2>
+  <ul>
+    <li ng-repeat='coupon in couponList'>
+      Code: {{coupon.couponCode}} - Value: {{coupon.value}}
+      <div>Redeemed at: {{coupon.redeemedAt}}</div>
+    </li>
+  </ul>
+</div>

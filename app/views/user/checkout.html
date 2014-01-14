@@ -1,0 +1,28 @@
+<div ng-controller='UserChekoutCtrl'>
+  <form ng-show='checkingout' ng-submit='pay()'>
+    <label>Item Name</label>
+    <input type='text' ng-model='name' disabled>
+    <label>Price</label>
+    <input ng-model='price' disabled>
+    <label>Shipping Address:</label>
+    <select ng-model='shipAddId' ng-change='change()' ng-options='address.id as address.company for address in addressSet'></select>
+    <div>{{shipAdd.firstName}} {{shipAdd.lastName}}</div>
+    <div>{{shipAdd.company}}</div>
+    <div>{{shippAdd.streetAddress}}</div>
+    <div>{{shipAdd.extendedAddress}}</div>
+    <div>{{shipAdd.locality}}</div>
+    <div>{{shipAdd.postalCode}}</div>
+    <div>{{shipAdd.country}}</div>
+    <button type='submit'>Pay!</button>
+  </form>
+  <ul ng-hide='checkingout'>
+    <strong>{{noCheckoutItem}}</strong>
+    <li ng-repeat='item in winItem'>
+      <div>Item Name: {{item.name}}</div>
+      <img ng-src="{{item.image}}">
+      <div>Description: {{item.description}}</div>
+      <div>Price: {{item.price | currency:'€'}}</div>
+      <button class='btn' ng-click='checkout()'>Checkout</button>
+    </li>
+  </ul>
+</div>

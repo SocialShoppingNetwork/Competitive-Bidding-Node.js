@@ -1,0 +1,20 @@
+<div ng-controller='UserFeedbackCtrl'>
+  <form ng-show='feedbacking' ng-submit='submit()'>
+    <label>Item Name</label>
+    <input type='text' ng-model='name' disabled>
+    <label>Feedback Message</label>
+    <textarea ng-model='message' maxlength='300' rows='5' placeholder='Leave your feedback here...' required style='resize:none'></textarea>
+    <br>
+    <button type='submit'>Post</button>
+  </form>
+  <ul ng-hide='feedbacking'>
+    <strong>{{noFeedbackItem}}</strong>
+    <li ng-repeat='item in feebackItem'>
+      <div>Item Name: {{item.name}}</div>
+      <img ng-src="{{item.image}}">
+      <div>Description: {{item.description}}</div>
+      <div>Price: {{item.price | currency:'€'}}</div>
+      <button class='btn' ng-click='feedback()'>Leave feedback</button>
+    </li>
+  </ul>
+</div>

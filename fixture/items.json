@@ -1,0 +1,60 @@
+[
+  {
+    "__v": 0,
+    "_id": {
+      "$oid": "513c4be09796a35cc7000003"
+    },
+    "category": {
+      "$oid": "51374380ab367f45cc000005"
+    },
+    "code": "iphone4sb64i",
+    "competitionTimeout": 120000,
+    "competitorList": [],
+    "description": "myDescdsf",
+    "fundSize": 1600,
+    "fundSizeRequired": 4000,
+    "image": "placeholdesssr.png",
+    "name": "iPhone 4S Black 64GB International",
+    "openAt": 1363338511276,
+    "sponsorCountRequired": 2,
+    "sponsorSet": [
+      {
+        "$oid": "512c97acb64a164e5c000003"
+      }
+    ],
+    "state": 1,
+    "transitionTimeout": 553000,
+    "updated": {
+      "$date": 1362906272555
+    }
+  },
+  {
+    "__v": 0,
+    "_id": {
+      "$oid": "513c9af3eaf9abd0cd000004"
+    },
+    "category": {
+      "$oid": "51374380ab367f45cc000005"
+    },
+    "code": "iphone4sb64i",
+    "competitionTimeout": 120000,
+    "competitorList": [],
+    "description": "myDescdsf",
+    "fundSize": 30579,
+    "fundSizeRequired": 4000,
+    "image": "placeholdesssr.png",
+    "name": "iPhone 4S Black 64GB International",
+    "openAt": 1363338511276,
+    "sponsorCountRequired": 2,
+    "sponsorSet": [
+      {
+        "$oid": "512c97acb64a164e5c000003"
+      }
+    ],
+    "state": 1,
+    "transitionTimeout": 553000,
+    "updated": {
+      "$date": 1362926343422
+    }
+  }
+]

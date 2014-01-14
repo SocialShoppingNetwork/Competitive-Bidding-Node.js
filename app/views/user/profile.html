@@ -1,0 +1,75 @@
+<div ng-controller='UserProfileCtrl'>
+  <div ng-show='otherUserProfile'>
+    <div><img ng-src="{{visitedProfile.avatarUrl}}"></div>
+    <div>Username: {{visitedProfile.username}}</div>
+    <div>Full Name: {{visitedProfile.fullName}}</div>
+    <div>Email: {{visitedProfile.email}}</div>
+    <a href="http://facebook.com/{{visitedProfile.fbId}}" target='_blank'>Facebook Page</a>
+  </div>
+  <div ng-hide='otherUserProfile'>
+    <section>
+      <form name='userProfile' ng-submit='edit()'>
+        <label>Username</label>
+        <input ng-model='username' placeholder='Username'>
+        <label>First name</label>
+        <input ng-model='firstName' placeholder='First name'>
+        <label>Last name</label>
+        <input ng-model='lastName' placeholder='Last name'>
+        <label>Email</label>
+        <input ng-model='email' placeholder='Email' type='email'>
+        <br>
+        <input type='submit' value='Update!'>
+      </form>
+      <ul>
+        <li>Balance: {{ balance }}</li>
+        <li>Available bids: {{ bidCount }}</li>
+        <li>Available points: {{ pointCount }}</li>
+      </ul>
+    </section>
+    <section>
+      <h3>User's registered address:</h3>
+      <ul>
+        <li ng-repeat='address in addressSet'>
+          <div>{{ address.firstName }} {{ address.lastName }}</div>
+          <div>{{ address.company }}</div>
+          <div>{{ address.streetAddress }}</div>
+          <div>{{ address.extendedAddress }}</div>
+          <div>
+            <span>{{ address.locality }}</span>
+            <span>{{ address.region }}</span>
+            <span>{{ address.postalCode }}</span>
+            <span>{{ address.countryCodeAlpha2 }}</span>
+          </div>
+          <button ng-click='removeAddress()' ng-disabled="disabled">remove
+          </button>
+        </li>
+      </ul>
+      <button ng-click='addAddress()'>Add Address</button>
+    </section>
+    <section>
+      <h3>Credit Cards:</h3>
+      <ul>
+        <li ng-repeat='card in cardSet'>
+          <span>{{card.type}}</span>
+          <span>{{card.number}}</span>
+          <span>Exp {{card.expirationDate}}</span>
+          <span ng-show="card.default">Default</span>
+          <button
+            ng-click="promoteCard()"
+            ng-hide="card.default"
+            ng-disabled="promoteDisabled"
+            >
+            Make default
+          </button>
+          <button
+            ng-click='deleteCard()'
+            ng-disabled="deleteDisabled"
+            >
+            remove
+          </button>
+        </li>
+      </ul>
+      <button ng-click='createCard()'>Add Credit card</button>
+    </section>
+  </div>
+</div>
